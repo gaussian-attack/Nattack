@@ -1,0 +1,16 @@
+cifar10_data/
+all_models/
+imageNetTest/
+data/
+*.tar
+*.pyc
+*.ckpt
+*.pth
+*.pkl
+*.log
+.idea/
+.settings/
+.project
+*.zip
+
+
