@@ -1,0 +1,41 @@
+2018-09-20 23:54:29.729038: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2018-09-20 23:54:33.178383: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: Graphics Device major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:18:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-09-20 23:54:33.780051: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 1 with properties: 
+name: Graphics Device major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:3b:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-09-20 23:54:34.279893: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 2 with properties: 
+name: Graphics Device major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:86:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-09-20 23:54:34.766308: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 3 with properties: 
+name: Graphics Device major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:af:00.0
+totalMemory: 11.90GiB freeMemory: 11.75GiB
+2018-09-20 23:54:34.766743: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Device peer to peer matrix
+2018-09-20 23:54:34.766826: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1051] DMA: 0 1 2 3 
+2018-09-20 23:54:34.766842: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 0:   Y N N N 
+2018-09-20 23:54:34.766849: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 1:   N Y N N 
+2018-09-20 23:54:34.766856: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 2:   N N Y N 
+2018-09-20 23:54:34.766863: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1061] 3:   N N N Y 
+2018-09-20 23:54:34.766876: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: Graphics Device, pci bus id: 0000:18:00.0, compute capability: 6.1)
+2018-09-20 23:54:34.766886: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:1) -> (device: 1, name: Graphics Device, pci bus id: 0000:3b:00.0, compute capability: 6.1)
+2018-09-20 23:54:34.766894: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:2) -> (device: 2, name: Graphics Device, pci bus id: 0000:86:00.0, compute capability: 6.1)
+2018-09-20 23:54:34.766901: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:3) -> (device: 3, name: Graphics Device, pci bus id: 0000:af:00.0, compute capability: 6.1)
+/home/yandong/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+/home/yandong/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Traceback (most recent call last):
+  File "re_li_attack32_tfmultigpu.py", line 194, in <module>
+    main()
+  File "re_li_attack32_tfmultigpu.py", line 48, in main
+    sess = tf.Session(config=config)
+  File "/home/yandong/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1482, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/home/yandong/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 622, in __init__
+    self._session = tf_session.TF_NewDeprecatedSession(opts, status)
+KeyboardInterrupt

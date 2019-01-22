@@ -1,0 +1,21 @@
+# Initial Training
+CUDA_VISIBLE_DEVICES=0 python main.py --max_epochs=10 --is_train=True --adversarial=False --train_dir=./ref/resnet20_cifar10
+# Adversarial Training
+CUDA_VISIBLE_DEVICES=0 python main.py --is_train=True --adversarial=True  --restore=True --checkpoint_dir=./ref/resnet20_cifar10 --train_dir=./checkpoint/resnet20_cifar10_adv
+# Training with Pivot
+CUDA_VISIBLE_DEVICES=0 python main.py --is_train=True --adversarial=True  --pivot_loss_factor=0.0001 --restore=True --checkpoint_dir=./ref/resnet20_cifar10 --train_dir=./checkpoint/resnet20_cifar10_pivot
+# Cascade Training with Pivot
+CUDA_VISIBLE_DEVICES=0 python main.py --is_train=False --restore_inplace=True --save_iter_fgsm_images=True --test_data_from=train --train_dir=./checkpoint/resnet20_cifar10_pivot
+CUDA_VISIBLE_DEVICES=0 python main.py --is_train=True --adversarial=True  --pivot_loss_factor=0.0001 --cascade=True --saved_iter_fgsm_dir=./checkpoint/resnet20_cifar10_pivot --restore=True --checkpoint_dir=./ref/resnet20_cifar10 --train_dir=./checkpoint/resnet20_cifar10_pivot_cascade
+
+# Ensemble Training with Pivot
+CUDA_VISIBLE_DEVICES=0 python main.py --is_train=True --adversarial=False --train_dir=./checkpoint/r20_ens_source
+CUDA_VISIBLE_DEVICES=0 python main.py --is_train=True --adversarial=False --resnet_n=18 --train_dir=./checkpoint/r110_ens_source
+CUDA_VISIBLE_DEVICES=0 python tf_rename_variables.py --checkpoint_dir=checkpoint/r20_ens_source  --replace_from=main --replace_to=r20_ens_source
+CUDA_VISIBLE_DEVICES=0 python tf_rename_variables.py --checkpoint_dir=checkpoint/r110_ens_source --replace_from=main --replace_to=r110_ens_source
+CUDA_VISIBLE_DEVICES=0 python main.py --is_train=True --adversarial=True  --pivot_loss_factor=0.0001 --ensemble=True --restore=True --checkpoint_dir=./ref/resnet20_cifar10 --train_dir=./checkpoint/resnet20_cifar10_pivot_ensemble
+
+# Test with adversarial images from different source network
+CUDA_VISIBLE_DEVICES=0 python main.py --is_train=False --restore_inplace=True --save_adver_images=True --test_data_from=validation --train_dir=./checkpoint/resnet20_cifar10_pivot
+CUDA_VISIBLE_DEVICES=0 python main.py --is_train=False --restore_inplace=True --use_saved_images=True --saved_data_dir=./checkpoint/resnet20_cifar10_pivot --train_dir=./checkpoint/resnet20_cifar10_pivot_cascade
+
