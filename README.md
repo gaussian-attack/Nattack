@@ -14,6 +14,7 @@ Below is Table 1 from our paper, where we show the robustness of each accepted d
 | Defense | Dataset | Distance | Success rate |
 |---|---|---|---|
 | ADV-TRAIN [Madry et al. (2018)](https://arxiv.org/abs/1706.06083) | CIFAR | 0.031 (linf) | 47.9% |
+| ADV-BNN [Liu et al. (2019)](https://arxiv.org/abs/1810.01279) | CIFAR | 0.031 (linf) | 75.3% |
 | THERM-ADV [Madry et al. (2018)[Buckman et al. (2018)](https://arxiv.org/abs/1706.06083) | CIFAR | 0.031 (linf) | 91.2% |
 | LID [Ma et al. (2018)](https://arxiv.org/abs/1801.02613) | CIFAR | 0.031 (linf) | 100.0% |
 | THERM [Buckman et al. (2018)](https://openreview.net/forum?id=S18Su--CW) | CIFAR | 0.031 (linf) | 100.0% |
