@@ -15,7 +15,7 @@ Below is Table 1 from our paper, where we show the robustness of each accepted d
 |---|---|---|---|
 | ADV-TRAIN [Madry et al. (2018)](https://arxiv.org/abs/1706.06083) | CIFAR | 0.031 (linf) | 47.9% |
 | ADV-BNN [Liu et al. (2019)](https://arxiv.org/abs/1810.01279) | CIFAR | 0.035 (linf) | 75.3% |
-| THERM-ADV Buckman et al. (2018)[Madry et al. (2018)](https://arxiv.org/abs/1706.06083) | CIFAR | 0.031 (linf) | 91.2% |
+| THERM-ADV [Buckman et al. (2018)](https://openreview.net/forum?id=S18Su--CW)[Madry et al. (2018)](https://arxiv.org/abs/1706.06083) | CIFAR | 0.031 (linf) | 91.2% |
 | CAS-ADV [Na et al. (2018)](https://arxiv.org/abs/1708.02582) | CIFAR | 0.031 (linf) | 97.7% |
 | ADV-GAN [Wang & Yu (2019)](https://openreview.net/forum?id=S1lIMn05F7) | CIFAR | 0.015 (linf) | 98.3% |
 | LID [Ma et al. (2018)](https://arxiv.org/abs/1801.02613) | CIFAR | 0.031 (linf) | 100.0% |
