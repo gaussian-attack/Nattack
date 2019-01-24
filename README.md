@@ -37,12 +37,8 @@ Powerful adversarial attack methods are vital for understanding how to construct
 
 ## Source code
 
-This repository contains our instantiations of the general attack techniques
-described in our paper, 6 defenses (SAP, LID, RANDOMIZATION, INPUT-TRANS, THERM,
-and THERM-DAV) are based on BPDA [Anish et al. (2018)](https://arxiv.org/abs/1802.00420), the defended models of GUIDED DENOISER and PIXEL DEFLECTION are based on [Athalye & Carlini, (2018)](https://arxiv.org/abs/1804.03286), and the models defended by RSE
-and CAS-ADV come from the original papers.
+This repository contains our implemenation of the black-box attack algorithm described in our paper, six defense methods (SAP, LID, RANDOMIZATION, INPUT-TRANS, THERM, and THERM-DAV) borrowed from the code of Anish et al. (2018), two defended models (GUIDED DENOISER and PIXEL DEFLECTION) based on the code of Athalye & Carlini, (2018), and two defended models (RSE and CAS-ADV) from the original papers.
 
 ## Note
 
-Please note that this paper is still on the process of ICML double blind review.
-
+Please note the paper is still under double-blind review.
